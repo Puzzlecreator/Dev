@@ -27,7 +27,7 @@ public class InitWindow extends JPanel {
         fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         fr.add(KI);
 
-        jp.setBackground(Color.BLUE);
+        jp.setBackground(Color.BLACK);
         fr.add(jp);
         fr.setSize(Width, Height);
 

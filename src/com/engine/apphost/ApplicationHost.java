@@ -1,11 +1,14 @@
 package com.engine.apphost;
 
-public class ApplicationHost {
+public class ApplicationHost<Debug> {
+
+    public boolean Debug = true;
 
     public static void main(String[] args)
     {
-        InitWindow IW = new InitWindow();
-        
-        IW.createWindow("RedShift Engine");
+        // Initializes the class updater
+        ClassInit CI = new ClassInit();
+
+        CI.createWindow("RedShift Engine");
     }
 }

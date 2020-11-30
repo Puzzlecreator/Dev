@@ -8,7 +8,7 @@ import java.awt.*;
 public class InitWindow extends JPanel {
 
     // Tells if debug is needed
-    private boolean debug = false;
+    private boolean debug = true;
 
     // Creates Window Frame
     public void createWindow(String Title)
@@ -23,6 +23,7 @@ public class InitWindow extends JPanel {
 
         JFrame fr = new JFrame(Title);
         JPanel jp = new JPanel();
+        jp.setLayout(null);
         KeyboardInput KI = new KeyboardInput();
         fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         fr.add(KI);
@@ -39,7 +40,16 @@ public class InitWindow extends JPanel {
         {
             System.out.println(fr.getSize());
             System.out.println(fr.getExtendedState());
+
+            GetDebugInfo(debug);
         }
 
+    }
+
+    public void GetDebugInfo(boolean Debug)
+    {
+        System.out.println("isDecorated: " + JFrame.isDefaultLookAndFeelDecorated());
+
+        System.out.println("Debug = " + debug);
     }
 }
